@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router";
 import "./App.css";
-import NavigationBar from "./components/NavigationBar";
-import RouterMapping from "./components/RouterMapping";
+import NavigationBar from "./components/home/NavigationBar";
+import RouterMapping from "./components/home/RouterMapping";
 
 function App() {
   return (

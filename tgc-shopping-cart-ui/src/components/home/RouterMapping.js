@@ -1,12 +1,13 @@
 import { Route, Routes } from "react-router";
-import Product from "./Product";
-import Order from "./Order";
-import Sale from "./Sale";
-import Customer from "./Customer";
+import Product from "../product/Product";
+import Order from "../order/Order";
+import Sale from "../sale/Sale";
+import CustomerDetails from "../customer/CustomerDetails";
 import Home from "./Home";
 import NotFound from "./NotFound";
-import Protected from "./Protected";
-import ProductList from "./ProductList";
+import Protected from "../security/Protected";
+import ProductList from "../product/ProductList";
+import CustomerForm from "../customer/CustomerForm";
 
 const RouterMapping = () => {
     return (
@@ -17,7 +18,8 @@ const RouterMapping = () => {
             </Route>
             <Route path="/orders" element={<Order />} />
             <Route path="/sales" element={<Protected><Sale /></Protected>} />
-            <Route path="/customers" element={<Protected><Customer /></Protected>} />
+            <Route path="/customers" element={<Protected><CustomerDetails /></Protected>} />
+            <Route path="/customers/:action/:id?" element={<CustomerForm />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
     )
