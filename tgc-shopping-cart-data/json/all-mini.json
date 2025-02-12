@@ -1,0 +1,198 @@
+{
+  "products": [
+    {
+      "product_ID": 0,
+      "product_type": "Shirt",
+      "product_name": "Oxford Cloth",
+      "size": "XS",
+      "colour": "red",
+      "price": 114,
+      "quantity": 66,
+      "description": "A red coloured, XS sized, Oxford Cloth Shirt",
+      "id": "88f1"
+    },
+    {
+      "product_ID": 1,
+      "product_type": "Shirt",
+      "product_name": "Oxford Cloth",
+      "size": "S",
+      "colour": "red",
+      "price": 114,
+      "quantity": 53,
+      "description": "A red coloured, S sized, Oxford Cloth Shirt",
+      "id": "29be"
+    },
+    {
+      "product_ID": 2,
+      "product_type": "Shirt",
+      "product_name": "Oxford Cloth",
+      "size": "M",
+      "colour": "red",
+      "price": 114,
+      "quantity": 54,
+      "description": "A red coloured, M sized, Oxford Cloth Shirt",
+      "id": "1ab3"
+    },
+    {
+      "product_ID": 3,
+      "product_type": "Shirt",
+      "product_name": "Oxford Cloth",
+      "size": "L",
+      "colour": "red",
+      "price": 114,
+      "quantity": 69,
+      "description": "A red coloured, L sized, Oxford Cloth Shirt",
+      "id": "4d18"
+    },
+    {
+      "product_ID": 4,
+      "product_type": "Shirt",
+      "product_name": "Oxford Cloth",
+      "size": "XL",
+      "colour": "red",
+      "price": 114,
+      "quantity": 47,
+      "description": "A red coloured, XL sized, Oxford Cloth Shirt",
+      "id": "c69c"
+    }
+  ],
+  "customers": [
+    {
+      "customer_id": 3,
+      "customer_name": "Shina Dullaghan",
+      "gender": "Polygender",
+      "age": 59,
+      "home_address": "269 Gemma SummitSuite 109",
+      "zip_code": 5661,
+      "city": "Aliburgh",
+      "state": "Australian Capital Territory",
+      "country": "Australia",
+      "id": "d0bb"
+    },
+    {
+      "customer_id": 4,
+      "customer_name": "Hewet McVitie",
+      "gender": "Bigender",
+      "age": 67,
+      "home_address": "743 Bailey GroveSuite 141",
+      "zip_code": 1729,
+      "city": "South Justinhaven",
+      "state": "Queensland",
+      "country": "Australia",
+      "id": "f912"
+    },
+    {
+      "customer_id": 5,
+      "customer_name": "Rubia Ashleigh",
+      "gender": "Polygender",
+      "age": 30,
+      "home_address": "48 Hyatt ManorSuite 375",
+      "zip_code": 4032,
+      "city": "Griffithsshire",
+      "state": "Queensland",
+      "country": "Australia",
+      "id": "39e9"
+    },
+    {
+      "id": "075a",
+      "customer_id": "6",
+      "customer_name": "scc",
+      "gender": "scd",
+      "age": "6",
+      "home_address": "ssdf",
+      "zip_code": "60015",
+      "city": "dfg",
+      "state": "fg",
+      "country": "dfg"
+    }
+  ],
+  "orders": [
+    {
+      "order_id": 1,
+      "customer_id": 64,
+      "payment": 30811,
+      "order_date": "2021-8-30",
+      "delivery_date": "2021-09-24",
+      "id": "16ba"
+    },
+    {
+      "order_id": 2,
+      "customer_id": 473,
+      "payment": 50490,
+      "order_date": "2021-2-3",
+      "delivery_date": "2021-02-13",
+      "id": "3e86"
+    },
+    {
+      "order_id": 3,
+      "customer_id": 774,
+      "payment": 46763,
+      "order_date": "2021-10-8",
+      "delivery_date": "2021-11-03",
+      "id": "af9b"
+    },
+    {
+      "order_id": 4,
+      "customer_id": 433,
+      "payment": 39782,
+      "order_date": "2021-5-6",
+      "delivery_date": "2021-05-19",
+      "id": "4543"
+    },
+    {
+      "order_id": 5,
+      "customer_id": 441,
+      "payment": 14719,
+      "order_date": "2021-3-23",
+      "delivery_date": "2021-03-24",
+      "id": "bba7"
+    }
+  ],
+  "sales": [
+    {
+      "sales_id": 0,
+      "order_id": 1,
+      "product_id": 218,
+      "price_per_unit": 106,
+      "quantity": 2,
+      "total_price": 212,
+      "id": "5877"
+    },
+    {
+      "sales_id": 1,
+      "order_id": 1,
+      "product_id": 481,
+      "price_per_unit": 118,
+      "quantity": 1,
+      "total_price": 118,
+      "id": "5bdc"
+    },
+    {
+      "sales_id": 2,
+      "order_id": 1,
+      "product_id": 2,
+      "price_per_unit": 96,
+      "quantity": 3,
+      "total_price": 288,
+      "id": "e8af"
+    },
+    {
+      "sales_id": 3,
+      "order_id": 1,
+      "product_id": 1002,
+      "price_per_unit": 106,
+      "quantity": 2,
+      "total_price": 212,
+      "id": "6670"
+    },
+    {
+      "sales_id": 4,
+      "order_id": 1,
+      "product_id": 691,
+      "price_per_unit": 113,
+      "quantity": 3,
+      "total_price": 339,
+      "id": "53d6"
+    }
+  ]
+}

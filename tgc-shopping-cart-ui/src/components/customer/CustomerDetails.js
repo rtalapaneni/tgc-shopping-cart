@@ -19,12 +19,6 @@ const CustomerDetails = () => {
       .then((data) => setCustomers(data));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("Form submitted");
-    
-  };
-
   return (
     <div className="customer-list">
       <h2>Customers</h2>
