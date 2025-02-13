@@ -78,7 +78,12 @@ export const CUSTOMER_TABLE_COLUMNS = [
 
 export const PRODUCT_TABLE_COLUMNS = [
   {
-    title: "Id",
+    title: "id",
+    dataIndex: "id",
+    key: "id",
+  },
+  {
+    title: "Product ID",
     dataIndex: "product_ID",
     key: "product_ID",
   },
@@ -116,5 +121,80 @@ export const PRODUCT_TABLE_COLUMNS = [
     title: "Description",
     dataIndex: "description",
     key: "description",
+  },
+  {
+    title: "View",
+    key: "view",
+    render: (text, record) => (
+      <Link to={`/products/view/${record.id}`}>View</Link>
+    ),
+  },
+  {
+    title: "Edit",
+    key: "edit",
+    render: (text, record) => (
+      <Link to={`/products/edit/${record.id}`}>Edit</Link>
+    ),
+  },
+  {
+    title: "Delete",
+    key: "delete",
+    render: (text, record) => (
+      <Link to={`/products/delete/${record.id}`}>Delete</Link>
+    ),
+  },
+];
+
+export const ORDER_TABLE_COLUMNS = [
+  {
+    title: "id",
+    dataIndex: "id",
+    key: "id",
+  },
+  {
+    title: "Order Id",
+    dataIndex: "order_id",
+    key: "order_id",
+  },
+  {
+    title: "Customer Id",
+    dataIndex: "customer_id",
+    key: "customer_id",
+  },
+  {
+    title: "Payment",
+    dataIndex: "payment",
+    key: "payment",
+  },
+  {
+    title: "Order Date",
+    dataIndex: "order_date",
+    key: "order_date",
+  },
+  {
+    title: "Delivery Date",
+    dataIndex: "delivery_date",
+    key: "delivery_date",
+  },
+  {
+    title: "View",
+    key: "view",
+    render: (text, record) => (
+      <Link to={`/orders/view/${record.id}`}>View</Link>
+    ),
+  },
+  {
+    title: "Edit",
+    key: "edit",
+    render: (text, record) => (
+      <Link to={`/orders/edit/${record.id}`}>Edit</Link>
+    ),
+  },
+  {
+    title: "Delete",
+    key: "delete",
+    render: (text, record) => (
+      <Link to={`/orders/delete/${record.id}`}>Delete</Link>
+    ),
   },
 ];
