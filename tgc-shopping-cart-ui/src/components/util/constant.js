@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-export const API_URL = "http://localhost:3000";
+export const API_URL = "http://localhost:8080";
 
 export const CUSTOMER_TABLE_COLUMNS = [
   {
@@ -78,49 +78,34 @@ export const CUSTOMER_TABLE_COLUMNS = [
 
 export const PRODUCT_TABLE_COLUMNS = [
   {
-    title: "id",
+    title: "Id",
     dataIndex: "id",
     key: "id",
   },
   {
-    title: "Product ID",
-    dataIndex: "product_ID",
-    key: "product_ID",
-  },
-  {
-    title: "Type",
-    dataIndex: "product_type",
-    key: "product_type",
-  },
-  {
     title: "Name",
-    dataIndex: "product_name",
-    key: "product_name",
+    dataIndex: "name",
+    key: "name",
   },
   {
-    title: "Size",
-    dataIndex: "size",
-    key: "size",
+    title: "Brand",
+    dataIndex: "brand",
+    key: "brand",
   },
   {
-    title: "Color",
-    dataIndex: "colour",
-    key: "colour",
-  },
-  {
-    title: "Price",
-    dataIndex: "price",
-    key: "price",
-  },
-  {
-    title: "Quantity",
-    dataIndex: "quantity",
-    key: "quantity",
+    title: "Model",
+    dataIndex: "model",
+    key: "model",
   },
   {
     title: "Description",
     dataIndex: "description",
     key: "description",
+  },
+  {
+    title: "Price",
+    dataIndex: "price",
+    key: "price",
   },
   {
     title: "View",

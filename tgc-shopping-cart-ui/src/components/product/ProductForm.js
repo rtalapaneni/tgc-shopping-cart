@@ -8,14 +8,13 @@ const ProductForm = () => {
   const { action, id } = useParams();
   const [product, setProduct] = useState({
     id: "",
-    product_ID: "",
-    product_type: "",
-    product_name: "",
-    size: "",
-    colour: "",
-    price: "",
-    quantity: "",
+    name: "",
+    brand: "",
+    model: "",
     description: "",
+    price: "",
+    imageUrl: "",
+    isActive: ""
   });
   const navigate = useNavigate();
 
@@ -30,7 +29,7 @@ const ProductForm = () => {
   },[id]);
 
   const fetchProduct = async () => {
-    const GetProduct = await axios.get(`${API_URL}/products/${id}`);
+    const GetProduct = await axios.get(`${API_URL}/products?productId=${id}`);
     setProduct(await GetProduct.data);
     console.log("product", product);
   };
@@ -43,13 +42,13 @@ const ProductForm = () => {
 
   const updateProduct = (product) => {
     axios
-      .put(`${API_URL}/products/${product.id}`, product)
+      .put(`${API_URL}/products`, product)
       .then(() => navigate("/products"));
   };
 
   const deleteProduct = (product) => {
     axios
-      .delete(`${API_URL}/products/${product.id}`)
+      .delete(`${API_URL}/products?productId=${product.id}`)
       .then(() => navigate("/products"));
   };
 
@@ -68,6 +67,7 @@ const ProductForm = () => {
       deleteProduct(product);
     }
   };
+
 
   return (
     <div className="product">
@@ -89,42 +89,34 @@ const ProductForm = () => {
               disabled={true}
             />
           </Form.Item>
-          <Form.Item label="Product ID">
-            <input
-              name="product_ID"
-              value={product?.product_ID?? ""}
-              onChange={handleInputChange}
-              disabled={isReadOnly}
-            />
-          </Form.Item>
-          <Form.Item label="Type">
-            <input
-              name="product_type"
-              value={product?.product_type?? ""}
-              onChange={handleInputChange}
-              disabled={isReadOnly}
-            />
-          </Form.Item>
           <Form.Item label="Name">
             <input
-              name="product_name"
-              value={product?.product_name?? ""}
+              name="name"
+              value={product?.name?? ""}
               onChange={handleInputChange}
               disabled={isReadOnly}
             />
           </Form.Item>
-          <Form.Item label="Size">
+          <Form.Item label="Brand">
             <input
-              name="size"
-              value={product?.size?? ""}
+              name="brand"
+              value={product?.brand?? ""}
               onChange={handleInputChange}
               disabled={isReadOnly}
             />
           </Form.Item>
-          <Form.Item label="Color">
+          <Form.Item label="Model">
             <input
-              name="colour"
-              value={product?.colour?? ""}
+              name="model"
+              value={product?.model?? ""}
+              onChange={handleInputChange}
+              disabled={isReadOnly}
+            />
+          </Form.Item>
+          <Form.Item label="Description">
+            <input
+              name="description"
+              value={product?.description?? ""}
               onChange={handleInputChange}
               disabled={isReadOnly}
             />
@@ -137,20 +129,20 @@ const ProductForm = () => {
               disabled={isReadOnly}
             />
           </Form.Item>
-          <Form.Item label="Quantity">
+          <Form.Item label="Image URL">
             <input
-              name="quantity"
-              value={product?.quantity?? ""}
+              name="imageUrl"
+              value={product?.imageUrl?? ""}
               onChange={handleInputChange}
               disabled={isReadOnly}
             />
           </Form.Item>
-          <Form.Item label="Description">
+          <Form.Item label="Is Active?">
             <input
-              name="description"
-              value={product?.description?? ""}
+              name="isActive"
+              value={product?.isActive?? ""}
               onChange={handleInputChange}
-              disabled={isReadOnly}
+              disabled={true}
             />
           </Form.Item>
           {isDisplayButton && (
