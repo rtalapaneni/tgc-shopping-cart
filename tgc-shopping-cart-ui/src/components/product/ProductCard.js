@@ -1,5 +1,4 @@
 import { Link } from "react-router";
-import { API_URL } from "../util/constant";
 
 const ProductCard = ({ product }) => {
   return (
