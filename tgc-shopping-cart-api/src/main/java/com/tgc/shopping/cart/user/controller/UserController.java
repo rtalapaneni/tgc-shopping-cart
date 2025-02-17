@@ -15,27 +15,29 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping("/save")
-    public User saveUser(User user) {
+    @PostMapping
+    public User createUser(User user) {
+        user.setId(null);
+        user.setIsActive(Boolean.TRUE);
         return userService.saveUser(user);
     }
 
-    @GetMapping("/get/all")
+    @GetMapping("/all")
     public List<User> getUsers() {
         return userService.getAllUsers();
     }
 
-    @GetMapping("/get")
+    @GetMapping
     public @ResponseBody User getUserById(@RequestParam Long userId) {
         return userService.getUserById(userId);
     }
 
-    @PutMapping("/update")
-    public @ResponseBody User updateUser(@RequestParam Long userId, User user) {
+    @PutMapping
+    public @ResponseBody User updateUser(User user) {
         return userService.saveUser(user);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping
     public @ResponseBody void deleteUser(@RequestParam Long userId) {
         userService.deleteUser(userId);
     }

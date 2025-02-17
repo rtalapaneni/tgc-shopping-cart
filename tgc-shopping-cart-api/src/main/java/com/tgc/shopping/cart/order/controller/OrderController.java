@@ -15,27 +15,28 @@ public class OrderController {
         this.orderService = orderService;
     }
 
-    @PostMapping("/save")
-    public Order saveOrder(Order order) {
+    @PostMapping
+    public Order createOrder(Order order) {
+        order.setId(null);
         return orderService.saveOrder(order);
     }
 
-    @GetMapping("/get/all")
+    @GetMapping("/all")
     public List<Order> getOrders() {
         return orderService.getAllOrders();
     }
 
-    @GetMapping("/get")
+    @GetMapping
     public @ResponseBody Order getOrderById(@RequestParam Long orderId) {
         return orderService.getOrderById(orderId);
     }
 
-    @PutMapping("/update")
+    @PutMapping
     public @ResponseBody Order updateOrder(@RequestParam Long orderId, Order order) {
         return orderService.saveOrder(order);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping
     public @ResponseBody void deleteOrder(@RequestParam Long orderId) {
         orderService.deleteOrder(orderId);
     }
