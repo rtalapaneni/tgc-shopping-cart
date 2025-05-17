@@ -13,10 +13,16 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      group-id: product
 logging:
   structured:
     format:
       console: ecs
   level:
     root: info
+product:
+  topic: product-topic
 
