@@ -13,3 +13,10 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+logging:
+  structured:
+    format:
+      console: ecs
+  level:
+    root: info
+

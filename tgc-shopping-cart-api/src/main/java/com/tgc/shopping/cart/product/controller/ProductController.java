@@ -3,6 +3,7 @@ package com.tgc.shopping.cart.product.controller;
 import com.tgc.shopping.cart.product.dto.Product;
 import com.tgc.shopping.cart.product.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.MDC;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class ProductController {
 
     @PostMapping
     public @ResponseBody Product createProduct(@RequestBody Product product) {
-        log.info("Product: {}", product);
+        log.info("createProduct");
         product.setId(null);
         product.setIsActive(Boolean.TRUE);
         return productService.saveProduct(product);
@@ -27,21 +28,28 @@ public class ProductController {
 
     @GetMapping("all")
     public @ResponseBody List<Product> getProducts() {
+        log.info("getProducts");
         return productService.getAllProducts();
     }
 
     @GetMapping
     public @ResponseBody Product getProductById(@RequestParam Long productId) {
+        MDC.put("productId", String.valueOf(productId));
+        log.info("getProductById");
         return productService.getProductById(productId);
     }
 
     @PutMapping
-    public @ResponseBody Product updateProduct(@RequestBody Product Product) {
-        return productService.saveProduct(Product);
+    public @ResponseBody Product updateProduct(@RequestBody Product product) {
+        MDC.put("productId", String.valueOf(product.getId()));
+        log.info("updateProduct");
+        return productService.saveProduct(product);
     }
 
     @DeleteMapping
     public @ResponseBody void deleteProduct(@RequestParam Long productId) {
+        MDC.put("productId", String.valueOf(productId));
+        log.info("deleteProduct");
         productService.deleteProduct(productId);
     }
 }
